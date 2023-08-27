@@ -1,0 +1,113 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+.box {
+  width: 90vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  background-color: #f1f2f3;
+  gap: 20px;
+}
+
+.box__parent-stack {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 82.5vh;
+  /* overflow-y: scroll; */
+  padding: 0px 20px 20px 20px;
+  padding-right: 26px;
+}
+
+.box__list-items {
+  overflow-y: scroll;
+  width: 20rem;
+  height: 80vh;
+  padding: 0px 24px 0px 0px;
+}
+
+/* Hide the scrollbar for Webkit browsers (Chrome, Safari) */
+.box__list-items::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+.box__list-items::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.box__list-items::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+.parent-stack__search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: white;
+  width: 100%;
+  height: 3rem;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  /* padding-left: 10px;
+    padding-right: 10px; */
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.search-bar__icons {
+  display: flex;
+  gap: 20px;
+}
+
+.search-bar__border {
+  width: 86%;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  border: 1px solid black; /* Start with no border */
+  transition: border-color 0.3s ease-out, border-width 0.3s ease-out;
+}
+
+.search-bar__border.active {
+  border-color: #d9d9d9; /* Change border color */
+  border-width: 1px; /* Add border width */
+}
+
+.parent-stack__choose {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 14px;
+}
+
+.parent-stack__choose p {
+  font-size: 14px;
+  font-family: sans-serif;
+  color: #616f82;
+  cursor: pointer;
+}
+
+.parent-stack__choose span {
+  font-size: 12px;
+  font-family: sans-serif;
+  background-color: #616f82;
+  padding: 2px 4px 2px 4px;
+  color: white;
+  border-radius: 8px;
+}
+
+.parent-stack__choose input {
+  height: 18px;
+  width: 18px;
+}
+
+.parent-stack__choose input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.dropdown p:hover {
+  background-color: #cdcdcd;
+  transition: 0.2s ease;
+}
